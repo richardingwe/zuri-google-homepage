@@ -76,17 +76,26 @@ a:hover {
 }
 
 .search-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: relative;
+	width: 38vw;
+	border: 1px solid #dfdfe0;
+	border-radius: 24px;
+	height: 46px;
 }
 .search-bar:hover {
 	filter: drop-shadow(1px 1px 2px #5f5f5f67);
 }
+
 .search input {
-	width: 584px;
-	height: 46px;
+	background-color: transparent;
+	height: 100%;
+	width: 31vw;
 	margin: 6px;
-	border: 0.5px solid #dfdfe0;
-	border-radius: 24px;
+	outline: none;
+	border: none;
 }
 
 .search .svg-1 {
@@ -147,4 +156,86 @@ footer {
 	color: rgba(0, 0, 0, 0.54);
 	font-size: 15px;
 	border: 1px solid #dadce0;
+}
+
+.cover {
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.country .cover .about {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.about {
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+}
+.carbon {
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+}
+.privacy {
+	display: flex;
+	justify-content: flex-end;
+	align-content: center;
+}
+
+.about a,
+.carbon a,
+.privacy a {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.54);
+	padding: 15px;
+}
+
+.Pb9hCb {
+	width: 13px;
+	height: 13px;
+	margin-right: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+	.logo-container img {
+		width: 50%;
+	}
+	.search-bar {
+		width: 65vw;
+		height: 35px;
+	}
+	.search-bar input {
+		width: 40vw;
+	}
+	.feeling button {
+		font-size: 8px;
+	}
+	.google-offered a {
+		font-size: 9px;
+	}
+	.country {
+		font-size: 7px;
+	}
+	.carbon {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		justify-content: center;
+	}
+	.about {
+		grid-row-start: 2;
+	}
+	.about a,
+	.carbon a,
+	.privacy a {
+		font-size: 6px;
+		padding: 7px;
+	}
+	* {
+		font-size: 12px;
+	}
 }
